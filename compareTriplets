@@ -1,0 +1,27 @@
+int* compareTriplets(int a_count, int* a, int b_count, int* b, int* result_count) {
+    int index_a=0,index_b=0;
+    *result_count = 2;
+    int *result = return_integer_array_using_dynamic_allocation(result_count);
+    
+    while(index_a<a_count && index_b<b_count){
+        
+        printf("gere %d %d\n",a[index_a],b[index_b]);
+        if(a[index_a] > b[index_b]){
+            result[0] += 1;
+            printf("here 1");
+            
+            
+        }
+        else if(a[index_a] < b[index_b]){
+            result[1] +=1;
+            printf("here 2");
+            
+            
+        }
+        printf("count %d %d\n",result[0],result[1]);
+        
+        index_a++;index_b++;
+    }
+    
+    return result;
+}
