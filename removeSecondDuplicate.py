@@ -13,27 +13,18 @@ class Solution:
         #sort array using the sort function
         nums.sort()
 
-        #if previous is same as the current element, it means it is a duplicate 
-        #and it removed
-
-        k = len(nums)
-        first_duplicate = False
-        previous = nums[0]
-        index = 1
-
-        # if first repeated occurance, note that down, if seconf remove it
-        while index < k:
-            if first_duplicate == True and nums[index]==previous:
-                nums.remove(nums[index])
-                k = k-1
-                first_duplicate = False
+        #check if previous is same as current, set double to true
+        #remove further occurences
+        prev = nums [0]
+        repeat = 1
+        for each_element in nums[1:]:
+            if repeat >= 2 and each_element == prev:
+                nums.remove(each_element)
+            elif each_element == prev:
+                repeat = repeat + 1
             else:
+                prev = each_element
+                repeat = 1
 
-                if nums[index] == previous:
-                    first_duplicate = True
-                    
-                else: 
-                    previous = nums[index]
-                index = index+1
-                
-            
+
+# time complexity O(n)
