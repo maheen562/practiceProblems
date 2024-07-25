@@ -17,15 +17,6 @@ class Solution:
         max_profit = 0
         min_price = prices[0]
 
-        #determine max price in all possible combinations
-
-       class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-
-        while prices and prices[-1] == 0:
-            prices.pop()
-        max_profit = 0
-        min_price = prices[0]
 
         #min price, maximum profit
 
